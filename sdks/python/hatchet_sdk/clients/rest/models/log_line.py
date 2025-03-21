@@ -33,7 +33,7 @@ class LogLine(BaseModel):
         description="The creation date of the log line.", alias="createdAt"
     )
     message: StrictStr = Field(description="The log message.")
-    metadata: Dict[str, Any] = Field(description="The log metadata.")
+    metadata: Optional[Dict[str, Any]] = Field(description="The log metadata.")
     __properties: ClassVar[List[str]] = ["createdAt", "message", "metadata"]
 
     model_config = ConfigDict(
