@@ -37,7 +37,7 @@ class StepRunEvent(BaseModel):
     time_last_seen: datetime = Field(alias="timeLastSeen")
     step_run_id: Optional[StrictStr] = Field(default=None, alias="stepRunId")
     workflow_run_id: Optional[StrictStr] = Field(default=None, alias="workflowRunId")
-    reason: StepRunEventReason
+    reason: StepRunEventReason | str
     severity: StepRunEventSeverity
     message: StrictStr
     count: StrictInt
